@@ -1,9 +1,11 @@
 import Card from './shared/Card';
+import RatingSelect from './RatingSelect';
 import Button from './shared/Button';
 import { useState } from 'react';
 
-const FeedbackForm = () => {
+const FeedbackForm = ({ handleAdd }) => {
   const [text, setText] = useState('');
+  const [rating, setRating] = useState(10);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState('');
 
@@ -23,11 +25,26 @@ const FeedbackForm = () => {
     setText(input);
   };
 
+  const handleSubmit = e => {
+    e.preventDefault();
+    // validate for at least 10 chars
+    if (text.trim().length > 10) {
+      //create new item object with state
+      const newItem = {
+        rating: rating,
+        text: text,
+      };
+      handleAdd(newItem);
+      //clear out input field
+      setText('');
+    }
+  };
+
   return (
     <Card>
-      <form>
+      <form onSubmit={handleSubmit}>
         <h2>How would you rate your service with us?</h2>
-        {/* todo: rating select component */}
+        <RatingSelect select={rating => setRating(rating)} />
         <div className="input-group">
           <input
             type="text"
