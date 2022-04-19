@@ -185,15 +185,13 @@ input:focus {
   color: rebeccapurple;
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
-.about-link {
-  display: flex;
-  justify-content: flex-end;
+div.about-link {
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
 .about-link a {
   color: #fff;
   cursor: pointer;
@@ -209,6 +207,20 @@ input:focus {
 
 .about p {
   margin: 10px 0;
+}
+
+header a {
+  text-decoration: none;
+}
+
+h2.app-title {
+  color: #ff6a95;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h2.app-title:hover {
+  color: #fff;
 }
 
 @media (max-width: 600px) {
