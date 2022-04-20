@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# React Feedback App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a project from [Udemy - React Front To Back 2022](https://www.udemy.com/course/react-front-to-back-2022/) by Travery Media.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [Acceptance Criteria](#acceptance-criteria)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Acceptance Criteria
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- Add a new feedback item using the form
+- Delete a feedback item
+- Edit an existing feedback in the feedback list
+- Navigate to the about page & back
+- See the feedback stats change when the feedback list changes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![](src/images/app-screenshot.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Live Site URL: [Live Site](https://gregarious-custard-53a7d3.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `npm run eject`
+### Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Create React App
+- React Router Dom
+- Framer Motion
+- UUID
+- React Icons
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What I learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+I learned how to first build this project by passing functions, state, and other data via props. This is otherwise known as 'prop-drilling,' and is fine for small projects. However it starts to get messy when the application grows in complexity.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Later in the project, I learned how to refactor the code to use context (instead of prop-drilling) for functions and global state. This cleaned things up quite a bit, especially in the `src/app.js` file.
 
-## Learn More
+Finally, I got some practice with using external NPM dependencies like React Router Dom for creating routes, Framer Motion for feedback list animation, and UUID for generating unique id's for each feedback item.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Steps To Run App
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Clone the repo onto local machine
+- Navigate to project directory in Terminal, then: `npm install` to install project dependencies
+- Terminal: `npm start`
 
-### Code Splitting
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Website - [Chris Korsak](https://www.chriskorsak.net)
+- Udemy - React Front To Back 2022 - [Traversy Media](https://www.udemy.com/course/react-front-to-back-2022/)
