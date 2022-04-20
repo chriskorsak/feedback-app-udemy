@@ -5,7 +5,6 @@ import FeedbackItem from './FeedbackItem';
 
 const FeedbackList = () => {
   const { feedback } = useContext(FeedbackContext);
-  console.log(feedback);
   if (feedback.length < 1) return 'No feedback yet!';
   return (
     <div className="feedback-list">

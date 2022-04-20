@@ -1,11 +1,20 @@
 import Card from './shared/Card';
 import RatingSelect from './RatingSelect';
 import Button from './shared/Button';
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import FeedbackContext from '../context/FeedbackContext';
 
 const FeedbackForm = () => {
-  const { handleAdd } = useContext(FeedbackContext);
+  const { handleAdd, feedbackEdit, handleUpdate } = useContext(FeedbackContext);
+
+  // populate form if feedbackEdit state changes (from clicking edit button)
+  useEffect(() => {
+    if (feedbackEdit.edit === true) {
+      setText(feedbackEdit.item.text);
+      setRating(feedbackEdit.item.rating);
+      setBtnDisabled(false);
+    }
+  }, [feedbackEdit]);
 
   const [text, setText] = useState('');
   const [rating, setRating] = useState(10);
@@ -37,7 +46,14 @@ const FeedbackForm = () => {
         rating: rating,
         text: text,
       };
-      handleAdd(newItem);
+
+      //either update existing feedback being edited
+      if (feedbackEdit.edit === true) {
+        handleUpdate(feedbackEdit.item.id, newItem);
+        // or add a new feedback to list
+      } else {
+        handleAdd(newItem);
+      }
       //clear out input field
       setText('');
     }
