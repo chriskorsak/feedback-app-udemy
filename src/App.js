@@ -6,7 +6,7 @@ import feedbackData from './data/feedbackData';
 import FeedbackForm from './components/FeedbackForm';
 import FeedbackStats from './components/FeedbackStats';
 import About from './pages/About';
-import AboutIconLink from './components/AboutIconLink';
+import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -46,8 +46,8 @@ function App() {
 
           <Route path="/about" element={<About />} />
         </Routes>
+        <Footer />
       </div>
-      <AboutIconLink />
     </Router>
   );
 }

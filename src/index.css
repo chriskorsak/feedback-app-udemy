@@ -21,10 +21,14 @@ ul {
   max-width: 768px;
   margin: auto;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 85vh;
 }
 
 header {
-  height: 70px;
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -185,11 +189,8 @@ input:focus {
   color: rebeccapurple;
 }
 
-div.about-link {
-  padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  right: 0;
+footer {
+  text-align: center;
 }
 
 .about-link a {
